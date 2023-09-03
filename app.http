@@ -33,12 +33,12 @@ GET http://localhost:4000/user/followers/
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjkxMjMwMTI0fQ.WP8Loq3an3L9XFF0aA8Zl0xxTJsE9K8Gl_r6vwh2HPY 
 
 ###
-GET http://localhost:4000/tweets/2/
+GET http://localhost:4000/tweets/1/
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjkxMjMwMTI0fQ.WP8Loq3an3L9XFF0aA8Zl0xxTJsE9K8Gl_r6vwh2HPY 
 
 
 ###
-GET http://localhost:4000/tweets/6/likes/
+GET http://localhost:4000/tweets/1/likes/
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjkxMjMwMTI0fQ.WP8Loq3an3L9XFF0aA8Zl0xxTJsE9K8Gl_r6vwh2HPY 
 
 
@@ -55,7 +55,11 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZ
 ###
 POST http://localhost:4000/user/tweets/
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjkxMjMwMTI0fQ.WP8Loq3an3L9XFF0aA8Zl0xxTJsE9K8Gl_r6vwh2HPY 
+Content-Type: application/json
 
+{
+   "tweet": "The Mornings..."
+}
 
 ###
 DELETE http://localhost:4000/tweets/19/
