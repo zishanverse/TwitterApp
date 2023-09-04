@@ -33,12 +33,12 @@ GET http://localhost:4000/user/followers/
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjkxMjMwMTI0fQ.WP8Loq3an3L9XFF0aA8Zl0xxTJsE9K8Gl_r6vwh2HPY 
 
 ###
-GET http://localhost:4000/tweets/1/
+GET http://localhost:4000/tweets/2/
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjkxMjMwMTI0fQ.WP8Loq3an3L9XFF0aA8Zl0xxTJsE9K8Gl_r6vwh2HPY 
 
 
 ###
-GET http://localhost:4000/tweets/1/likes/
+GET http://localhost:4000/tweets/2/likes/
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjkxMjMwMTI0fQ.WP8Loq3an3L9XFF0aA8Zl0xxTJsE9K8Gl_r6vwh2HPY 
 
 
