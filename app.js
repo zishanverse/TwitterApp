@@ -199,23 +199,19 @@ app.get("/tweets/:tweetId/likes/", authorization, async (request, response) => {
   const query = `SELECT * FROM follower INNER JOIN user ON user.user_id = follower.following_user_id
   WHERE follower.follower_user_id = ${userDetails.user_id};`;
   const allTweets = await db.all(query);
+
   if (
     allTweets.some((each) => each.following_user_id === tweetDetails.user_id)
   ) {
-    const query = `
+    const resultquery = `
   SELECT 
-    user.name
-  FROM like INNER JOIN user ON like.user_id = user.user_id INNER JOIN tweet ON tweet.tweet_id = like.tweet_id 
-  WHERE tweet.tweet_id = ${tweetId}
-  ORDER BY user.name;`;
+    user.username
+  FROM user INNER JOIN like ON like.user_id = user.user_id 
+  WHERE like.tweet_id = ${tweetId};`;
 
-    const result = await db.all(query);
-    console.log(result);
-    const l = result.length;
-    const list = [];
-    for (let i = 0; i < l; i++) {
-      list.push(result[i].name);
-    }
+    const result = await db.all(resultquery);
+    const list = result.map((each) => each.username);
+    console.log(list);
     response.send({ likes: list });
   } else {
     response.status(401);
